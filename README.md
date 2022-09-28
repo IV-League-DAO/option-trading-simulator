@@ -10,7 +10,7 @@ pip install -r requirements.txt
 ### Path generation:
 This command will generate paths for the simulation into runGen folder. For more information run this command with ```--help``` argument.
 ```
-python3 generateRuns.py --saveDir <output_path> -p <num_path>.pickle --pricesFile Gemini_ETHUSD1h_unixFix.csv
+python3 generateRuns.py --saveDir <output_path> -p <num_path> --pricesFile Gemini_ETHUSD1h_unixFix.csv
 ```
 This will generate <num_path>.pickle file.
 
@@ -20,12 +20,12 @@ For more information run this command with ```--help``` argument.
 
 Default strategy (Without hedging strategy)
 ```
-python3 runStrategy.py -m 1.0,0.5  -s 0.8,1.0  -c 2 --saveDir <outputFolder> -r <num_path>.pickle --strategy AbstractStrategy --ivc 0.05 --initPrice 2000 --calls
+python3 runStrategy.py -m 1.0 0.5  -s 0.8 1.0  -c 2 --saveDir <outputFolder> -r <num_path>.pickle --strategy AbstractStrategy --ivc 0.05 --initPrice 2000 --calls
 ```
 
 Hedging strategy
 ```
-python3 runStrategy.py -m 1.0,0.5  -s 0.8,1.0  -c 2 --saveDir <outputFolder> -r <num_path>.pickle --strategy DeltaIntervalHedgeStrategy --ivc 0.05 --initPrice 2000 --calls  --strategyArgs 1:h " -0.4:float" " -0.5:float"
+python3 runStrategy.py -m 1.0 0.5  -s 0.8 1.0  -c 2 --saveDir <outputFolder> -r <num_path>.pickle --strategy DeltaIntervalHedgeStrategy --ivc 0.05 --initPrice 2000 --calls  --strategyArgs 1:h " -0.4:float" " -0.5:float"
 ```
 
 ## Strategies
