@@ -49,6 +49,7 @@ def run_simulation(flag, paths, mu,sigma, ivC,minIV, p0, collateralReserve,sampl
     pool_values = []
     selected_strategy,strategyArgs, targetDelta = strategy_setup
     for epoch_id in range(len(paths)):
+        print(epoch_id)
         rv = volatility.calculateRV(prices[epoch_id],utils.IV_WINDOW,24)
         iv = volatility.calculateIVConstant(rv,ivC, 2.7)
         start_timestamp = iv.index[0]
@@ -101,7 +102,7 @@ def parseStrategyArgs(args):
 
 def main(args):
     print(args)
-    sample_length = 365*24
+    sample_length = utils.SAMPLE_LENGTH
     p0 = args.initPrice
     ivC = args.ivc
     initcollateralReserve = 10e8

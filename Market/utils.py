@@ -11,6 +11,7 @@ currentdir = os.path.dirname(os.getcwd())
 sys.path.insert(0,currentdir)
 start_time = datetime.datetime(2021,1,1,8,tzinfo=datetime.timezone.utc)
 IV_WINDOW = 30
+SAMPLE_LENGTH = 365*24 + IV_WINDOW*24
 
 def is_expiration(d):
     return d.weekday() == 4 and d.hour == 8

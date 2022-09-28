@@ -52,11 +52,10 @@ def genReturns(stdDistRet, num_paths,sample_length,**kwargs):
 def main(args):
     print(args)
     stdDistRet = loadStdReturns(args.pricesFile)
-    sample_length = 365*24 + utils.IV_WINDOW*24
     samples = args.paths
 
 
-    paths = genReturns(stdDistRet,samples,sample_length,
+    paths = genReturns(stdDistRet,samples,utils.SAMPLE_LENGTH,
         min_connected=24,
         max_connected=24*3,
         with_replacement=0)
