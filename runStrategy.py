@@ -136,7 +136,7 @@ if __name__ == "__main__":
                     type=float, nargs='+', required=True,
                     help="Volatility: -s 0.1 1")
     parser.add_argument("-c", "--cores", default=2,type=int,help="Number of cores to use (do not include virtuals)")
-    parser.add_argument("--saveDir", default='runGen',type=str,help="Where to save the outputs")
+    parser.add_argument("--saveDir", default='output',type=str,help="Where to save the outputs")
     parser.add_argument("-r", "--runs",required=True,type=str, help="pickle file of runs")
     parser.add_argument("--strategy",required=True,choices=list(map(lambda x:x[0],strategies)), help="strategy")
     parser.add_argument("--strategyArgs", nargs="*", default=[], help="Arguments to startegy: 1.2:float \"asd:str\" 1:int")

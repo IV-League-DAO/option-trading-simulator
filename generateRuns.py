@@ -70,7 +70,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--saveDir", default='runGen',type=str,help="Where to save the outputs")
+    parser.add_argument("--saveDir", default='output',type=str,help="Where to save the outputs")
     parser.add_argument("-p", "--paths", default=3000,type=int, help="Number of paths per simulation")
     parser.add_argument("--pricesFile", required=True,type=str,help="1h price data")
     args = parser.parse_args()
