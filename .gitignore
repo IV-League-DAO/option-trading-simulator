@@ -3,9 +3,9 @@
 images/*
 # keep folder
 !images/.gitkeep
-output/*
+generatedRuns/*
 # keep folder
-!output/.gitkeep
+!generatedRuns/.gitkeep
 
 .DS_Store
 
