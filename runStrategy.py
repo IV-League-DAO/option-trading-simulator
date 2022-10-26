@@ -155,8 +155,8 @@ if __name__ == "__main__":
     if args.calls and args.puts:
         parser.error("Just One option type must be specified")
     if args.calls and not (0.0 <= args.targetDelta <= 1.0):
-        parser.error("Terget delta for calls has to be in <0,1> interval")
+        parser.error("Target delta for calls has to be in <0,1> interval")
     if args.puts and not (-1.0 <= args.targetDelta <= 0.0):
-        parser.error("Terget delta for puts has to be in <-1,0> interval")
+        parser.error("Target delta for puts has to be in <-1,0> interval")
     main(args)
 

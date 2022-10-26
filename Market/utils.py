@@ -1,11 +1,7 @@
 import os
 import sys
 import datetime
-
-
-
-
-
+import random
 
 currentdir = os.path.dirname(os.getcwd())
 sys.path.insert(0,currentdir)
@@ -19,6 +15,14 @@ def is_expiration(d):
 def get_next_expiry(time):
     friday = time + datetime.timedelta( (4-time.weekday()) % 7 )
     return friday.replace(hour=8, minute=0,second=0,microsecond=0)
+
+def select_delta_base_strategy():
+    return random.uniform(0.01, 0.5) 
+
+def select_delta(strat = None):
+    if strat == None:
+        return select_delta_base_strategy()
+    return strat()
 
 
 class Perpetual(object):
