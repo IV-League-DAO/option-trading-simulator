@@ -12,6 +12,8 @@ This command will generate paths for the simulation into runGen folder. For more
 ```
 python3 generateRuns.py --saveDir <output_path> -p <num_path> --pricesFile Gemini_ETHUSD1h_unixFix.csv
 ```
+```<output_path>```: directory where your run generations will be stored (generateRuns) already exists as a default
+```<num_paths>```  : number of paths you wish to generate for your simulation runs
 This will generate <num_path>.pickle file.
 
 ## Simulate strategy
